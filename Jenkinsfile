@@ -1,9 +1,18 @@
 pipeline {
-  agent { label "linux" } 
+  agent any 
   environment {
     STACKHAWK_API_KEY = credentials("stackhawk-api-key")
   }
   stages {
+    stage("Install docker")
+    {
+      sh """ sudo yum update
+           sudo yum config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+           sudo yum install docker-ce
+           sudo systemctl start docker
+           sudo systemctl enable docker 
+      """
+    }
     stage("Deploy site") {
       steps {
         sh 'sudo cp index.json /var/www/html'
