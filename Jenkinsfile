@@ -1,7 +1,7 @@
 pipeline {
   agent { label "linux" } 
   environment {
-    STACKHAWK_API_KEY = credentials("stackhawk-api-key")
+    STACKHAWK_API_KEY = credentials("linux")
   }
   stages {
     stage("Deploy site") {
