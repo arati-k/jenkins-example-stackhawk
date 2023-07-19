@@ -12,12 +12,6 @@ pipeline {
             }
         }
 
-        stage("Deploy site") {
-            steps {
-                sh 'sudo cp index.json /var/www/html'
-            }
-        }
-
         stage("Run HawkScan Test") {
             steps {
                 sh """
