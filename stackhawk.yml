@@ -1,6 +1,6 @@
 app:
-  applicationId: 73e3ee3b-bb6e-43fe-9453-69a1ced4d196
-  host: http://43.204.146.51/
+  applicationId: 2c838226-48c3-4c25-bb94-f479b216bf5c
+  host: http://demo.icebreaker.minutuscloud.com/
   env: Development
 
 hawk:
