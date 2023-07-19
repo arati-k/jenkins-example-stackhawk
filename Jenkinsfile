@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Install Docker") {
             steps {
-                   sh 'sudo yum update -y'
+                   sh '''sudo yum update -y'''
             }
         }
 
