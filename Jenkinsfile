@@ -8,11 +8,7 @@ pipeline {
     stages {
         stage("Install Docker") {
             steps {
-                   sh 'yum -y install yum-utils'
-                   sh 'yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo'
-                   sh 'yum -y install docker-ce docker-ce-cli containerd.io'
-                   sh 'systemctl start docker'
-                   sh 'systemctl enable docker'
+                   sh 'sudo yum update -y'
             }
         }
 
